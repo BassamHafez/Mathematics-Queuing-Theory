@@ -1,0 +1,233 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics (Queuing Theory)</title>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+
+    <div class="loading">
+        <div class=" mb-3 spinner-border text-danger" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+        <h4>Mathematics (Queuing Theory and Modeling)</h4>
+    </div>
+
+    <div class="choose">
+        <div class="welcome-message mb-3"> 
+            <h1>Welcome to our project (BBAH)</h1>
+        </div>
+       
+        <div class="choose-img">
+            <img src="images/queue(1).png" class="queue-img" alt="">
+        </div>
+
+        <div class="choose-btns">
+            <div class="btn Deterministic home-btn1 mx-2">
+                <div class="first-layer1"></div>
+                <div class="second-layer1"></div>
+                <div class="third-layer1"></div>
+                <span class="btn-span">Deterministic</span>
+            </div>
+            <div class="btn Stochastic home-btn2 mx-2">
+                <div class="first-layer2"></div>
+                <div class="second-layer2"></div>
+                <div class="third-layer2"></div>
+                <span class="btn-span"> Stochastic </span>
+            </div>
+        </div>
+    </div>
+
+    <div>
+      <div id="particles-js"></div>
+
+      <div id="detPage">
+          <div>
+              <button class=" reselect btn"><i class="fa-solid fa-left-long"></i></button>
+          </div>
+          <section class="container-fluid mt-4">
+              <div class="row">
+                  <div class=" inputs col-md-6">
+      
+                      <div class=" address mb-5">
+                          <h3>Enter the following values (determenstic)</h3>
+                      </div>
+      
+                      <div class=" form  text-center">
+      
+                          <div class="input-group mb-4">
+                              <input type="text" id="Mu" class=" input-one form-control" placeholder="Enter value of  μ">
+                              <span class=" span-icon input-group-text">μ</span>
+                          </div>
+                          <div class="input-group mb-4">
+                              <input type="text" id="Lambda" class=" input-one form-control" placeholder="Enter value of  λ">
+                              <span class=" span-icon input-group-text">λ</span>
+                          </div>
+                          <div class="input-group mb-4">
+                              <input type="text" id="K" class="input-one form-control" placeholder="Enter value of  K">
+                              <span class=" span-icon input-group-text">k</span>
+                          </div>
+                          <div class="input-group mb-4">
+                              <input type="text" id="t" class=" input-one form-control" placeholder="Enter value of  t">
+                              <span class=" span-icon input-group-text">t</span>
+                          </div>
+                          <div class="input-group mb-4">
+                              <input type="text" id="n" class=" input-one form-control" placeholder="Enter value of  n">
+                              <span class=" span-icon input-group-text">n</span>
+                          </div>
+                          <div class="input-group mb-4">
+                              <input type="text" id="M" class=" input-one form-control" placeholder="Enter value of  M">
+                              <span class=" span-icon input-group-text">m</span>
+                          </div>
+                          <button id="solve" class="solve mb-5 btn">Solve Question</button>
+                      </div>
+                  </div>
+      
+                  <div class=" outputs col-md-6">
+                      <div class=" address mb-4">
+                          <h3>The answer is as follows</h3>
+                      </div>
+      
+                      <div  class="output output-1 mb-3">
+                          <h3>t <sub>i</sub> = <span id="tiOutput"></span> </h3>
+                      </div>
+                      <div  class=" output output-2 mb-3">
+                          <h3>n <sub id="N0Sub"></sub> = <span id="N0_tOutput"></span></h3>
+                      </div>
+                      <div  class=" output output-3 mb-3">
+                          <h3>n <sub id="N1Sub"></sub> = <span id="N1_tOutput"></span></h3>
+                      </div>
+                      <div  class=" output output-4 mb-3">
+                          <h3>n <sub id="N2Sub"></sub> = <span id="N2_tOutput"></span></h3>
+                      </div>
+                      <div  class=" output output-5 mb-3">
+                          <h3>W <sub>(q)</sub><sub id="W0Sub"></sub> = <span id="W0_Output"></span></h3>
+                      </div>
+                      <div  class=" output output-6 mb-3">
+                          <h3>W <sub>(q)</sub><sub id="W1Sub"></sub> = <span id="W1_Output"></span></h3>
+                      </div>
+                      <div  class=" output output-7 mb-3">
+                          <h3>W <sub>(q)</sub><sub id="W2Sub"></sub> = <span id="W2_Output"></span></h3>
+                      </div>
+      
+                  </div>
+              </div>
+          </section>
+      </div>
+      
+      <div id="stocPage">
+        <div>
+          <button class=" reselect btn"><i class="fa-solid fa-left-long"></i></button>
+      </div>
+         <section class="container-fluid p-5  ">
+              <div class="row">
+                <div class=" inputs col-md-6">
+          
+                  <div class=" address mb-5">
+                    <h3>Enter the following values {stochastic}</h3>
+                  </div>
+          
+                  <div class=" form  text-center">
+          
+                    <div class="input-group mb-4">
+                      <input type="text" id="Mu" class=" input-one form-control" placeholder="Enter value of  μ" >
+                      <span class=" span-icon input-group-text">μ</span>
+                    </div>
+                    <div class="input-group mb-4">
+                      <input type="text" id="Lambda" class=" input-one form-control" placeholder="Enter value of  λ" >
+                      <span class=" span-icon input-group-text">λ</span>
+                    </div>
+                    <div class="input-group mb-4">
+                      <input type="text" id="K" class="input-one form-control" placeholder="Enter value of  K" >
+                      <span class=" span-icon input-group-text">k</span>
+                    </div>
+                    <div class="input-group mb-4">
+                      <input type="text" id="n" class=" input-one form-control" placeholder="Enter value of  n" >
+                      <span class=" span-icon input-group-text">n</span>
+                    </div>
+                    <div class="input-group mb-4">
+                      <input type="text" id="c" class=" input-one form-control" placeholder="Enter value of  c"  >
+                      <span class=" span-icon input-group-text">c</span>
+                    </div>
+                   
+                    <button id="solveStoc" class=" solve mb-5 btn">Solve Question</button>
+                  </div>
+                </div>
+          
+                <div class=" outputs col-md-6">
+                  <div class=" address mb-4">
+                    <h3>The answer is as follows</h3>
+                  </div>
+          
+                  <div class="output output-1 mb-3">
+                    <h3><span id="p0_Output"></span> </h3>
+                  </div>
+                  <div class=" output output-2 mb-3">
+                    <h3> <span id="pn_Output"></span></h3>
+                  </div>
+                  <div class=" output output-3 mb-3">
+                    <h3> <span id="l_Output"></span></h3>
+                  </div>
+                  <div class=" output output-4 mb-3">
+                    <h3> <span id="lq_Output"></span></h3>
+                  </div>
+                  <div class=" output output-5 mb-3">
+                    <h3> <span id="W_Output"></span></h3>
+                  </div>
+                  <div class=" output output-6 mb-3">
+                    <h3> <span id="Wq_Output"></span></h3>
+                  </div>
+               
+          
+                </div>
+              </div>
+            </section>
+         <div class="wrapper" id="wrapperId">
+              <div class="container">
+                <h2 class=" stoc-type text-center my-5">choose type of question you want to solve</h2>
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-md-3 ">
+                    <div class="item text-center p-2">
+                      <h2 id="mm1">M/M/1 </h2>
+                    </div>
+                  </div>
+                  <div class="col-md-3  ">
+                    <div class="item text-center p-2">
+                      <h2 id="mm1k">M/M/1/K</h2>
+                    </div>
+                  </div>
+                  <div class="col-md-3 ">
+                    <div class="item  text-center p-2 ">
+                      <h2 id="mmc">M/M/c</h2>
+                    </div>
+                  </div>
+                  <div class="col-md-3  ">
+                    <div class="item text-center p-2">
+                      <h2 id="mmck"> M/M/c/K </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            
+            </div>
+      </div>
+    </div>
+  
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="nerdamer-master/all.min.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/about.js"></script>
+</body>
+
+</html>
