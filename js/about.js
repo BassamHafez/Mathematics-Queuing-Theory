@@ -359,7 +359,6 @@ let btnSolve = document.getElementById("solveStoc");
 btnSolve.onclick = function () {
   showOutputCaseOne(); 
   Stochastic();
-  alert("k")
 };
 
 function showGui() {
